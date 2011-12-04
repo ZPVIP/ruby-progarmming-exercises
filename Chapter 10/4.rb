@@ -7,9 +7,7 @@ puts <<EOF
 EOF
 
 def prime?(num)
-  # max = num - 1
-  max = Math.sqrt(num).ceil - 1 # 提高性能
-  2.upto(max) do |i|
+  2.upto(num - 1) do |i|
     return false if num % i == 0
   end
   true
